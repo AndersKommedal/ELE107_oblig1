@@ -10,7 +10,8 @@ namespace TestGitHub
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("hei");
+            Console.WriteLine("hei"); //KOMMENTAR REKTANGEL
+
         }
     }
 }
