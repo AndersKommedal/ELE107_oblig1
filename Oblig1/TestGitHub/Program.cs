@@ -10,7 +10,18 @@ namespace TestGitHub
     {
         static void Main(string[] args)
         {
+           // double test = 0;
+            Temperaturmaaler temp = new Temperaturmaaler();
+            for (int i = 0; i < 10000; i++)
+            {
+                temp.Maal();
+                Console.WriteLine("Temp: " + temp.Temperatur);
+                
+            }
+                
             
+            Console.WriteLine("Trykk en tast for å avslutte...");
+            Console.ReadKey();
         }
     }
 }
