@@ -10,7 +10,7 @@ namespace TestGitHub
     {
         double posisjonX, posisjonY, temperatur;
         int id;
-        Random rand = new Random();
+        static Random rand = new Random();
 
         public Temperaturmaaler()
         {
@@ -57,18 +57,19 @@ namespace TestGitHub
         }
         public int Id
         {
-            get;
-            set;
+            get { return id; }
+            set { id = value; }
         }
-
+       
         public void Maal() //Returnerer et flyttall mellom 0 og 1273,1
         {
+            
             temperatur = rand.Next(0, 12732) / 10.0;
         }
 
         public override string ToString()
         {
-            return Id + " - (" + PosisjonX + ", " + PosisjonY + ")";
+            return Id + " - (" + PosisjonX + ", " + PosisjonY + ") - Måleverdi: " + Temperatur;
         }
 
     }
